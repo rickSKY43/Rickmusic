@@ -52,7 +52,7 @@ async def fallen_st(_, message: Message):
                     link = result["link"]
                     published = result["publishedTime"]
                 searched_text = f"""
-➻ **ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ** 
+➻ **ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ** 
 
 📌 **ᴛɪᴛʟᴇ :** {title}
 
