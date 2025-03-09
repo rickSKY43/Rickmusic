@@ -32,7 +32,7 @@ from FallenMusic import app, app2
 
 @app.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
 async def broadcast(_, message: Message):
-    brep = await message.reply_text("sᴛᴀʀᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ ʙʀᴏᴀᴅᴄᴀsᴛ...")
+    brep = await message.reply_text("sᴀʙᴀʀ ᴀsᴛᴀɢᴀ ʟᴀɢɪ ᴅɪᴘʀᴏsᴇs ɪɴɪ...")
     if message.reply_to_message:
         x = message.reply_to_message.id
         y = message.chat.id
