@@ -36,28 +36,28 @@ async def sudoadd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             return await message.reply_text(
-                "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ ɪᴅ."
+                "» ʙᴀʟᴇs ᴘᴇsᴀɴ ᴘᴇɴɢɢᴜɴᴀ, ᴀᴛᴀᴜ ʙᴇʀɪᴋᴀɴ ɪᴅ."
             )
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
         user = await app.get_users(user)
         if int(user.id) in SUDOERS:
-            return await message.reply_text(f"» {user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ.")
+            return await message.reply_text(f"» {user.mention} sᴜᴅᴀʜ ᴍᴀsᴜᴋ ᴋᴇ sᴜᴅᴏ ᴜsᴇʀ.")
         try:
             SUDOERS.add(int(user.id))
             await message.reply_text(f"ᴀᴅᴅᴇᴅ {user.mention} ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ.")
         except:
-            return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴅᴅ ᴜsᴇʀ ɪɴ sᴜᴅᴏᴇʀs.")
+            return await message.reply_text("ɢᴀɢᴀʟ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴜsᴇʀ ᴋᴇ ᴅᴀʟᴀᴍ sᴜᴅᴏ.")
 
     if message.reply_to_message.from_user.id in SUDOERS:
         return await message.reply_text(
-            f"» {message.reply_to_message.from_user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ."
+            f"» {message.reply_to_message.from_user.mention} sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴜsᴇʀ sᴜᴅᴏ."
         )
     try:
         SUDOERS.add(message.reply_to_message.from_user.id)
         await message.reply_text(
-            f"ᴀᴅᴅᴇᴅ {message.reply_to_message.from_user.mention} ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+            f"ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ {message.reply_to_message.from_user.mention} ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ᴋᴇ ᴅᴀʟᴀᴍ sᴜᴅᴏ ᴜsᴇʀ"
         )
     except:
         return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴅᴅ ᴜsᴇʀ ɪɴ sᴜᴅᴏᴇʀs.")
