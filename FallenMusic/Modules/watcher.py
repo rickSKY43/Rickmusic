@@ -79,7 +79,7 @@ async def on_stream_end(pytgcalls, update: Update):
     else:
         process = await app.send_message(
             chat_id=chat_id,
-            text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",
+            text="» ᴍᴇɴᴅᴏᴡɴʟᴏᴀᴅ ᴍᴜsɪᴄ/ᴠɪᴅᴇᴏ ᴅᴀʀɪ ᴘʟᴀʏʟɪsᴛ...",
         )
         title = get[0]["title"]
         duration = get[0]["duration"]
@@ -105,6 +105,6 @@ async def on_stream_end(pytgcalls, update: Update):
         await app.send_photo(
             chat_id=chat_id,
             photo=img,
-            caption=f"**➻ sᴀʙᴀʀ ɴʏᴇᴛ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
+            caption=f"**➻ sᴀʙᴀʀ ʏᴀ ᴋᴀᴋ**\n\n‣ **ᴅᴇsᴋʀɪᴘsɪ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀsɪ :** `{duration}` ᴍᴇɴɪᴛ\n‣ **ᴘᴇʀᴍɪɴᴛᴀᴀɴ ᴅᴀʀɪ :** {req_by}",
             reply_markup=buttons,
         )
