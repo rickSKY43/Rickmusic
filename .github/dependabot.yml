@@ -4,8 +4,8 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "00:00"
-    timezone: "Asia/Kolkata"
+    time: "20.17"
+    timezone: "Asia/Jakarta"
   labels:
     - "dependencies"
   open-pull-requests-limit: 50
