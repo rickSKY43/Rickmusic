@@ -39,7 +39,7 @@ from FallenMusic.Modules import ALL_MODULES
 @app.on_message(filters.command(["stats", "sysstats"]) & SUDOERS)
 async def sys_stats(_, message: Message):
     sysrep = await message.reply_text(
-        f"ɢᴇᴛᴛɪɴɢ {BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs, ɪᴛ'ʟʟ ᴛᴀᴋᴇ ᴀ ᴡʜɪʟᴇ..."
+        f"ᴍᴇʟɪʜᴀᴛ sᴛᴀᴛɪsᴛɪᴋ {BOT_NAME} ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ..."
     )
     try:
         await message.delete()
@@ -63,7 +63,7 @@ async def sys_stats(_, message: Message):
         else:
             cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
     except:
-        cpu_freq = "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ"
+        cpu_freq = "ɢᴀɢᴀʟ"
     hdd = psutil.disk_usage("/")
     total = hdd.total / (1024.0**3)
     total = str(total)
@@ -106,7 +106,7 @@ async def sys_stats(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="ᴄʟᴏsᴇ",
+                        text="ᴍᴇɴᴜᴛᴜᴘ",
                         callback_data=f"forceclose abc|{message.from_user.id}",
                     ),
                 ]
